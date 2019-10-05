@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import Latest from "./Latest";
-import LastView from "./LastView";
-import "../styles/Home.css";
+import Latest from './Latest';
+import LastView from './LastView';
+import '../styles/Home.css';
 
 const Home = () => (
-  <div className="homeContainer">
-    <div>
-      {/* <Latest /> */}
-      <LastView />
-    </div>
-    <div>test</div>
-  </div>
+	<div className="homeContainer">
+		<div />
+		<div>
+			<Latest />
+			<LastView />
+		</div>
+		<div />
+	</div>
 );
 
 export default Home;
