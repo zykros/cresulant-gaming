@@ -14,7 +14,8 @@ import cresulant_logo from '../assets/cresulant_logo.png';
 
 class MainMenu extends Component {
 	state = {
-		user: null
+		user: null,
+		userOptions: false
 	};
 
 	_handleKeyPress = (e) => {
@@ -66,15 +67,25 @@ class MainMenu extends Component {
 						) : (
 							<div>
 								<div className="signedInMenu">
-									<FaUserCircle />
+									<FaUserCircle
+										onClick={() => this.setState({ userOptions: !this.state.userOptions })}
+									/>
+									<div style={{ fontSize: '15px' }}>{`Hi, ${context.state.user.displayName}`}</div>
+								</div>
+								{
 									<div
-										onClick={() => this.setState({ userOptions: true })}
-										style={{ fontSize: '15px' }}
-									>{`Hi, ${context.state.user.displayName}`}</div>
-								</div>
-								<div style={{ position: 'absolute', right: '0' }}>
-									<button onClick={this.logout}>Logout</button>
-								</div>
+										className="userOptions"
+										style={
+											this.state.userOptions ? (
+												{ position: 'absolute', right: '0' }
+											) : (
+												{ display: 'none' }
+											)
+										}
+									>
+										<button onClick={this.logout}>Logout</button>
+									</div>
+								}
 							</div>
 						)}
 						<SideDraw />
