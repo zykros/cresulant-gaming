@@ -1,0 +1,18 @@
+.similarGames {
+  display: grid;
+  grid-template-columns: 90px 100%;
+  grid-template-rows: 110px auto;
+  grid-template-areas: "cover" "content";
+  grid-row-gap: 10px;
+}
+
+.similarGameCover {
+  height: 100%;
+  width: 100%;
+  grid-area: cover;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

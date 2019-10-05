@@ -1,0 +1,32 @@
+.signupContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 600px);
+  grid-template-rows: repeat(4, 50px);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  border: 1px solid black;
+}
+
+.signupInputFields {
+  font-size: 20px;
+  padding: 2px;
+  width: 100%;
+  height: 100%;
+  background: rgb(77, 73, 73);
+  border: none;
+  color: white;
+}

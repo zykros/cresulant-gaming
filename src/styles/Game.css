@@ -1,0 +1,201 @@
+.gameContainer {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  filter: blur(8px);
+  background-size: cover;
+}
+
+.content {
+  position: absolute;
+  margin-top: 270px;
+  top: 0;
+  justify-content: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 900px 200px;
+  grid-template-rows: 105px 50px auto auto;
+  grid-template-areas:
+    "gamecard title title"
+    "gamecard genres platform"
+    "gamecard content platform"
+    "gamecard content platform";
+  justify-content: center;
+  grid-column-gap: 100px;
+  grid-row-gap: 40px;
+}
+
+.gameTitle {
+  justify-content: center;
+  grid-area: title;
+  height: 100%;
+  font-size: 25px;
+  color: rgb(228, 215, 215);
+}
+
+.gameCard {
+  display: grid;
+  grid-template-rows: 400px max-content;
+  height: 100%;
+  grid-area: gamecard;
+  grid-template-areas:
+    "cover"
+    "gameinfo";
+}
+
+.gameCardCover {
+  grid-area: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.gameInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(20px, 100%));
+  color: white;
+  padding: 10px;
+}
+
+.gameContent {
+  color: white;
+  display: grid;
+  text-align: left;
+  grid-template-rows: 50px auto;
+  grid-area: content;
+  grid-gap: 50px;
+  grid-template-areas:
+    "tabs"
+    "data";
+}
+
+.tabs {
+  grid-area: tabs;
+}
+
+.data {
+  grid-area: data;
+}
+
+.tabButtons {
+  background: transparent;
+  color: rgb(175, 161, 161);
+  font-size: 14px;
+  border: 1px solid rgb(185, 169, 169);
+}
+
+.genresContainer {
+  grid-area: genres;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genres {
+  margin: 10px;
+  color: rgb(179, 162, 162);
+  border: 1px solid rgb(80, 70, 70);
+  padding: 5px;
+  background: rgba(97, 82, 82, 0.479);
+}
+
+.genres:hover {
+  border-color: white;
+  color: white;
+  cursor: pointer;
+}
+
+.platformNames {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-area: platform;
+  color: rgba(202, 187, 187, 0.788);
+}
+
+.platforms {
+  border: 1px solid black;
+  padding: 5px;
+  height: auto;
+  margin: 5px;
+  border-radius: 10px;
+  border-color: white;
+}
+
+.screenshotBackground {
+  height: 400px;
+  background-size: cover;
+}
+
+.backgroundFilter {
+  height: 100%;
+  border-bottom: 2px ridge white;
+  background: rgba(82, 80, 80, 0.418);
+}
+
+@media screen and (max-width: 1622px) {
+  .content {
+    grid-template-columns: 250px 700px 200px;
+    grid-template-rows: 105px 50px auto auto;
+  }
+}
+
+@media screen and (max-width: 1363px) {
+  .content {
+    grid-template-columns: 250px 500px 200px;
+    grid-template-rows: 105px 50px auto auto;
+  }
+}
+
+@media screen and (max-width: 1159px) {
+  .content {
+    grid-template-columns: 250px 500px 100px;
+    grid-template-rows: 105px 50px auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 974px) {
+  .gameContainer {
+    position: initial;
+    height: 100%;
+  }
+
+  .content {
+    position: initial;
+    margin: initial;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 700px;
+    grid-template-rows: auto;
+    align-items: center;
+    grid-template-areas:
+      "gamecard gamecard"
+      "title title"
+      "genres genres"
+      "platform platform"
+      "content content";
+    justify-content: center;
+  }
+
+  .platformNames {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .gameCard {
+    display: grid;
+    grid-template-rows: 0 auto;
+    height: 100%;
+    grid-area: gamecard;
+    grid-template-areas:
+      "cover"
+      "gameinfo";
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}
