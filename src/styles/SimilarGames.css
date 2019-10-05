@@ -1,0 +1,43 @@
+.similarGames {
+  display: grid;
+  grid-template-columns: 90px max-content;
+  grid-template-rows: 110px auto;
+  grid-template-areas: "cover" "content";
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  border: 1px solid rgb(153, 138, 138);
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.similarGames:hover {
+  background: rgba(133, 124, 124, 0.452);
+}
+
+.similarGamesTitle {
+  padding: 10px;
+}
+
+.similarGamesRatingContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.similarGameCover {
+  min-height: 100%;
+  width: 100%;
+  grid-area: cover;
+}
+
+.similarGamesDetails {
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

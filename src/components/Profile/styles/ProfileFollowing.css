@@ -1,0 +1,26 @@
+.gamesFollowedContainer {
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.gamesFollowedImage {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  min-height: 100%;
+}
+
+.gamesFollowedName {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.gamesFollowedContainer:hover {
+  background: white;
+}

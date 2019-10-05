@@ -1,0 +1,79 @@
+.profileLayout {
+  color: white;
+  display: grid;
+  width: 1000px;
+  margin: 100px auto;
+  background: rgba(75, 77, 83, 0.466);
+  grid-template-rows: 200px 100%;
+  grid-template-areas:
+    "profileInfo"
+    "profileContent";
+}
+
+.profileInfo {
+  grid-area: profileInfo;
+  border-bottom: 1px ridge white;
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 100px 50px;
+  grid-template-areas:
+    "profilePic profileTitle"
+    "profilePic profileOptions"
+    "profilePic profileTabs";
+}
+
+.profileOptionsLabel {
+  transition: all 300ms;
+  opacity: 0;
+  width: 0;
+  font-size: 11px;
+}
+
+.profilePic {
+  grid-area: profilePic;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+
+.profileOptions {
+  grid-area: profileOptions;
+}
+
+.profileTitle {
+  grid-area: profileTitle;
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.profileTabs {
+  grid-area: profileTabs;
+  justify-content: center;
+}
+
+.profileContent {
+  grid-area: profileContent;
+  display: grid;
+  min-height: 500px;
+  height: 100%;
+  background: rgba(78, 72, 72, 0.589);
+}
+
+.proTabs {
+  color: white;
+  background: transparent;
+}
+
+.proTabs:hover {
+  border: 1px solid rgb(79, 103, 134);
+  border-radius: 10%;
+}
+
+#followButton {
+  margin: auto;
+}
+
+.profileUserCircle {
+  text-align: center;
+  font-size: 150px;
+  margin: auto;
+}

@@ -1,0 +1,108 @@
+.reviewModalContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(27, 26, 26, 0.747);
+  z-index: 2;
+}
+
+.reviewBoxContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviewBox {
+  position: relative;
+  background: rgb(77, 70, 70);
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  border: 1px ridge rgb(177, 161, 161);
+  padding: 10px;
+  margin: 10px;
+}
+
+.reviewModal {
+  padding: 30px;
+  background: rgb(31, 29, 29);
+  border: 1px ridge rgb(177, 161, 161);
+  height: 650px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 400px;
+  font-size: 20px;
+  z-index: 101;
+}
+
+.ratingCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.reviewContent {
+  text-align: left;
+  color: red;
+  width: 100%;
+  white-space: pre-wrap;
+}
+
+.reviewSettings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 5px;
+}
+
+.reviewOptions {
+  position: absolute;
+  top: 6;
+  right: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+}
+
+.ratings {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.ratingsLeft {
+  text-align: right;
+  font-size: 25px;
+}
+
+.reviewPlatformStyle {
+  width: 100%;
+  padding: 5px;
+  background: rgb(80, 74, 74);
+  border: none;
+  color: rgb(163, 144, 144);
+  outline: none;
+  font-size: 20px;
+}
+
+.reviewTitle {
+  background: rgb(80, 74, 74);
+  outline: none;
+  color: rgb(216, 206, 206);
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  padding: 5px;
+}
+
+.reviewMessage {
+  background: rgb(80, 74, 74);
+  outline: none;
+  color: rgb(216, 206, 206);
+  padding: 5px;
+  width: 100%;
+  border: 1px solid white;
+}
